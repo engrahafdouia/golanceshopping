@@ -27,18 +27,18 @@
     <v-tabs v-model="tab" align-with-title class="d-none d-sm-flex">
       <!-- <v-tabs-slider color="yellow"></v-tabs-slider> -->
 
-      <router-link to="/">
+      <router-link class="myrouter" to="/">
         <v-tab class="mytab" >{{ $t("message.Home") }}</v-tab>
       </router-link>
 
-      <router-link :to="{name:'about'}">
+      <router-link class="myrouter" :to="{name:'about'}">
         <v-tab class="mytab" >{{ $t("message.About") }}</v-tab>
       </router-link>
       <!-- <v-tab class="mytab" to="/contact">        {{ $t("message.Feature") }}</v-tab> -->
-      <router-link to="/products">
+      <router-link class="myrouter" to="/products">
         <v-tab class="mytab" >{{ $t("message.Products") }}</v-tab>
       </router-link>
-      <router-link to="/contact">
+      <router-link class="myrouter" to="/contact">
         <v-tab class="mytab" > {{ $t("message.Contact") }}</v-tab>
       </router-link>
       <!-- <v-tab class="mytab" to="/admin"> {{ $t("message.Admin") }}</v-tab> -->
@@ -385,5 +385,9 @@ export default {
 }
 .login:hover {
   color: "indigo";
+}
+.myrouter{
+  text-decoration: none;
+  color:black
 }
 </style>
